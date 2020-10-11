@@ -180,6 +180,9 @@ app.get('/api/google/drive', passportConfig.isAuthenticated, passportConfig.isAu
 app.get('/api/chart', apiController.getChart);
 app.get('/api/google/sheets', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getGoogleSheets);
 app.get('/api/quickbooks', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getQuickbooks);
+app.get('/api/search/:keyword', apiController.getsearch);
+app.get('/api/labs/:id', apiController.getsearch);
+app.get('/api/course/:id', apiController.getsearch);
 
 /**
  * OAuth authentication routes. (Sign in)

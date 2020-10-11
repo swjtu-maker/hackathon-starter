@@ -804,3 +804,35 @@ exports.getGoogleSheets = (req, res) => {
     });
   });
 };
+
+//get,search
+//parmas:keyword
+exports.getsearch = (req, res) => {
+  console.log(req.params.keyword);
+  res.type('json').send([
+    {'id':'9318',
+    'name':'利兹计算机实验室',
+    'picture':'9318.jpg',
+    'description':'利兹学院的计算机实验室，有比较多的工作站。',
+    'opentime':'9:00',
+    'closetime':'21:00',
+    'website':'http://xxxx',
+    'status':'正常',
+    'tools':['工作站','服务器'],
+    'teacher':['李君'],
+    'rules':'禁止使用大功率用电器。禁止修改工作站账号密码。'
+    },
+    {'id':'swjtumaker',
+    'name':'交大创客空间',
+    'picture':'swjtumaker.jpg',
+    'description':'犀浦校区最专业的科创空间。',
+    'opentime':'9:00',
+    'closetime':'21:00',
+    'website':'http://xxxx',
+    'status':'正常',
+    'tools':['3D打印机','激光切割机'],
+    'teacher':['王衡','李娟'],
+    'rules':'禁止使用大功率用电器。'
+    }
+  ]);
+};
